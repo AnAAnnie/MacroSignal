@@ -34,12 +34,12 @@ pip install -r requirements.txt
 ## Citation
 If you use this framework in your research, please cite it as follows:
 ```
->@misc{MacroSignal2025,
->  title={MacroSignal: Extracting Predictive Macroeconomic Signals for U.S. Equity Alpha Generation},
->  author={Qing(Sunny) Luo},
->  year={2025},
->  url={https://github.com/AnAAnnie/MacroSignal}
->}
+@misc{MacroSignal2025,
+  title={MacroSignal: Extracting Predictive Macroeconomic Signals for U.S. Equity Alpha Generation},
+  author={Qing(Sunny) Luo},
+  year={2025},
+  url={https://github.com/AnAAnnie/MacroSignal}
+}
 ```
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
