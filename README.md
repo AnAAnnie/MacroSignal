@@ -32,10 +32,10 @@ pip install -r requirements.txt
 ```
 
 
-@misc{MacroSignal2025,
-  title={MacroSignal: Extracting Predictive Macroeconomic Signals for U.S. Equity Alpha Generation},
-  author={Qing(Sunny) Luo},
-  year={2025},
-  url={https://github.com/AnAAnnie/MacroSignal}
-}
+>@misc{MacroSignal2025,
+>  title={MacroSignal: Extracting Predictive Macroeconomic Signals for U.S. Equity Alpha Generation},
+>  author={Qing(Sunny) Luo},
+>  year={2025},
+>  url={https://github.com/AnAAnnie/MacroSignal}
+>}
 
