@@ -33,7 +33,7 @@ pip install -r requirements.txt
 
 ## Citation
 If you use this framework in your research, please cite it as follows:
-```
+```bibtex
 @misc{MacroSignal2025,
   title={MacroSignal: Extracting Predictive Macroeconomic Signals for U.S. Equity Alpha Generation},
   author={Qing(Sunny) Luo},
