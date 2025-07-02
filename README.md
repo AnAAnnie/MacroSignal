@@ -9,8 +9,8 @@
 - Evaluate predictive power using IC, IR, and long-short portfolio backtests
 - Compare macro factors with traditional value/momentum factors
 - Fully reproducible, modular, and academic-oriented
-```
-## Project Structure
+  
+```## Project Structure
 
 MacroSignal/
 ├── data/
@@ -29,6 +29,7 @@ MacroSignal/
 git clone https://github.com/AnAAnnie/MacroSignal.git
 cd MacroSignal
 pip install -r requirements.txt
+```
 
 
 @misc{MacroSignal2025,
