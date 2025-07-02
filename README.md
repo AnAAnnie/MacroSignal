@@ -10,8 +10,8 @@
 - Compare macro factors with traditional value/momentum factors
 - Fully reproducible, modular, and academic-oriented
   
-```## Project Structure
-
+## Project Structure
+```
 MacroSignal/
 ├── data/
 ├── factors/
