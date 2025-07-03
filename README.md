@@ -49,10 +49,11 @@ To install the project and its dependencies, follow these steps:
    ```bash
    git clone https://github.com/AnAAnnie/MacroSignal.git
    cd MacroSignal
-  ```
+   ```
 2. Install the required dependencies:
+   ```
    pip install -r requirements.txt
-  ```
+   ```
 3. If you prefer, you can create a virtual environment:
    ```python -m venv venv
    source venv/bin/activate  # On Windows, use venv\Scripts\activate
