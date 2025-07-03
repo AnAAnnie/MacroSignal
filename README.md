@@ -12,15 +12,33 @@
   
 ## Project Structure
 ```
-MacroSignal/
-├── data/
-├── factors/
-├── model/
-├── backtest/
-├── notebooks/
-├── utils/
-├── README.md
-└── LICENSE
+LayeredAlpha/
+├── data/                     # Raw data and processed datasets (macroeconomic & financial data)
+│   ├── stock_data/           # Stock market data (Yahoo, Quandl, etc.)
+│   └── macro_data/           # Macroeconomic data (GDP, CPI, etc.)
+│
+├── features/                 # Feature engineering scripts to extract relevant factors
+│   ├── factor_engineering.ipynb   # Scripts for constructing key factors (PE, PB, ROE, etc.)
+│   ├── factor_filtering.ipynb    # Factor filtering using Lasso, IC method
+│
+├── model/                    # Machine learning models for stock prediction
+│   ├── return_prediction.ipynb    # Training XGBoost, Random Forest, etc. for return prediction
+│   └── models/                   # Saved models and training outputs
+│
+├── backtest/                 # Backtesting and performance evaluation
+│   ├── backtest_evaluation.ipynb   # Scripts for backtesting and comparing models
+│
+├── notebooks/                # Jupyter notebooks for exploratory analysis and experiments
+│   ├── exploratory_analysis.ipynb  # Data exploration and initial analysis
+│
+├── utils/                    # Utility functions (data loaders, metrics, helpers)
+│   ├── data_loader.py         # Functions for loading and cleaning data
+│   ├── metrics.py             # Functions for calculating model evaluation metrics
+│   └── helpers.py             # Helper functions used across the codebase
+│
+├── LICENSE                   # License file (e.g., MIT License)
+└── README.md                 # Project overview and documentation
+
 ```
 
 ## Installation
