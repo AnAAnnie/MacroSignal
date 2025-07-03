@@ -51,7 +51,7 @@ To install the project and its dependencies, follow these steps:
    cd MacroSignal
   ```
 2. Install the required dependencies:
-  ```pip install -r requirements.txt
+   pip install -r requirements.txt
   ```
 3. If you prefer, you can create a virtual environment:
    ```python -m venv venv
