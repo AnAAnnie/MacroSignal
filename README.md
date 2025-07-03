@@ -43,11 +43,27 @@ LayeredAlpha/
 
 ## Installation
 
-```bash
-git clone https://github.com/AnAAnnie/MacroSignal.git
-cd MacroSignal
-pip install -r requirements.txt
+To install the project and its dependencies, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AnAAnnie/MacroSignal.git
+   cd MacroSignal
 ```
+2. Install the required dependencies:
+  ```pip install -r requirements.txt
+  ```
+3. If you prefer, you can create a virtual environment:
+   ```python -m venv venv
+   source venv/bin/activate  # On Windows, use venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+## Usage
+After the installation, you can start working with the notebooks to train the model or analyze the data:
+  1. Data preparation: data_preparation.ipynb will help you clean and prepare the stock and macroeconomic data.
+  2. Feature Engineering: factor_engineering.ipynb allows you to create key financial and macroeconomic factors for stock prediction.
+  3. Model Training: Use return_prediction.ipynb for training machine learning models like XGBoost and Random Forest to predict stock returns.
+  4. Backtesting: Evaluate the performance of your models with backtest_evaluation.ipynb.
 
 ## Citation
 If you use this framework in your research, please cite it as follows:
@@ -61,4 +77,10 @@ If you use this framework in your research, please cite it as follows:
 ```
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+Special thanks to the following projects that helped shape MacroSignal:
+  1. XGBoost
+  2. Random Forest
+  3. Macroeconomic Data from FRED and Quandl
 
