@@ -12,32 +12,39 @@
   
 ## Project Structure
 ```
-LayeredAlpha/
-├── data/                     # Raw data and processed datasets (macroeconomic & financial data)
-│   ├── stock_data/           # Stock market data (Yahoo, Quandl, etc.)
-│   └── macro_data/           # Macroeconomic data (GDP, CPI, etc.)
+MacroSignal/
+├── data/                     
+│   ├── macro_data/              # Raw macroeconomic data (e.g., GDP, CPI, interest rates) in CSV or Parquet format
+│   ├── stock_data/              # Equity market data (e.g., prices, volumes, market cap from Yahoo, Quandl, etc.)
+│   └── processed/               # Cleaned and merged datasets used for modeling
 │
-├── features/                 # Feature engineering scripts to extract relevant factors
-│   ├── factor_engineering.ipynb   # Scripts for constructing key factors (PE, PB, ROE, etc.)
-│   ├── factor_filtering.ipynb    # Factor filtering using Lasso, IC method
+├── features/                   
+│   ├── macro_factor_construction.ipynb  # Construct macro factor exposures, e.g., mapping GDP growth to industries
+│   ├── exposure_mapping.py              # Map macro indicators to stock- or sector-level exposure matrices
+│   └── factor_summary_stats.py          # Calculate IC, IR, volatility, and distribution stats for macro factors
 │
-├── model/                    # Machine learning models for stock prediction
-│   ├── return_prediction.ipynb    # Training XGBoost, Random Forest, etc. for return prediction
-│   └── models/                   # Saved models and training outputs
+├── model/                     
+│   ├── return_prediction.ipynb         # Train models (XGBoost, Random Forest, Lasso) to predict future returns
+│   ├── macro_factor_model.py           # Define model pipeline, structure, training procedure, and hyperparameters
+│   └── models/                         # Saved model files, checkpoints, and predictions
 │
-├── backtest/                 # Backtesting and performance evaluation
-│   ├── backtest_evaluation.ipynb   # Scripts for backtesting and comparing models
+├── backtest/                 
+│   ├── backtest_evaluation.ipynb       # Backtest performance and visualize cumulative returns, turnover, Sharpe ratio
+│   ├── portfolio_simulator.py          # Simulate portfolios using equal-weight, factor-weighted, or IC-weighted schemes
+│   └── performance_metrics.py          # Compute IC, IR, max drawdown, win rate, and other evaluation metrics
 │
-├── notebooks/                # Jupyter notebooks for exploratory analysis and experiments
-│   ├── exploratory_analysis.ipynb  # Data exploration and initial analysis
+├── notebooks/                
+│   ├── exploratory_macro.ipynb         # Explore relationships between macro variables and stock returns
+│   ├── macro_vs_traditional.ipynb      # Compare macro-driven factors with traditional alpha factors
+│   └── signal_stability.ipynb          # Analyze signal stability and robustness over time
 │
-├── utils/                    # Utility functions (data loaders, metrics, helpers)
-│   ├── data_loader.py         # Functions for loading and cleaning data
-│   ├── metrics.py             # Functions for calculating model evaluation metrics
-│   └── helpers.py             # Helper functions used across the codebase
+├── utils/                    
+│   ├── data_loader.py                  # Load and align macro and stock data; support frequency conversion
+│   ├── factor_utils.py                 # Normalize, winsorize, and preprocess macro factors
+│   └── visualization.py                # Plot factor returns, correlation matrices, heatmaps, and performance charts
 │
-├── LICENSE                   # License file (e.g., MIT License)
-└── README.md                 # Project overview and documentation
+├── LICENSE                             # License file (e.g., MIT License)
+└── README.md                           # Project overview, methodology, usage instructions, and documentation
 
 ```
 
